@@ -31,6 +31,13 @@ public class PerimeterAssignmentRunner {
             }
 	//count is tha answer        
         return count;
+
+    //Complete writing the method getAverageLength
+    public double getAverageLength(Shape s) {
+	//Take shape perimeter and devide between the number of points (x,y)
+        double average = getPerimeter(s)/getNumPoints(s);
+	//average is the answer
+        return average;
 	
     //Add code in the method testPerimeter
     public void testPerimeter () {
