@@ -45,7 +45,9 @@ public class PerimeterAssignmentRunner {
         Shape s = new Shape(fr);
         double length = getPerimeter(s);
         int numPoints = getNumPoints(s);
+	double avLength = getAverageLength(s);
         System.out.println("perimeter = " + length);
         System.out.println("Number of points = " + numPoints);
+	System.out.println("Average length = " + avLength);
 
 
