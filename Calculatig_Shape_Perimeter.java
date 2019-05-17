@@ -29,7 +29,7 @@ public class PerimeterAssignmentRunner {
 		//increment count to the end
                 count++;
             }
-	//count is tha answer        
+	//count is the answer        
         return count;
 
     //Complete writing the method getAverageLength
@@ -38,6 +38,18 @@ public class PerimeterAssignmentRunner {
         double average = getPerimeter(s)/getNumPoints(s);
 	//average is the answer
         return average;
+
+    //Complete writing the method getLargestSide
+    public double getLargestSide(Shape s) {
+        double largest = 0;
+        Point prevPt = s.getLastPoint();
+        for(Point currPt : s.getPoints()){
+            double currDist = prevPt.distance(currPt);
+            if(currDist>largest) largest = currDist;
+            prevPt = currPt;
+            }
+        return largest;
+    }
 	
     //Add code in the method testPerimeter
     public void testPerimeter () {
@@ -46,8 +58,11 @@ public class PerimeterAssignmentRunner {
         double length = getPerimeter(s);
         int numPoints = getNumPoints(s);
 	double avLength = getAverageLength(s);
+	double largestSide = getLargestSide(s);
         System.out.println("perimeter = " + length);
         System.out.println("Number of points = " + numPoints);
 	System.out.println("Average length = " + avLength);
+        System.out.println("The largest side in the shape = " + largestSide);
+
 
 
