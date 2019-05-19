@@ -50,6 +50,18 @@ public class PerimeterAssignmentRunner {
             }
         return largest;
     }
+
+    //Complete writing the method getLargestX
+    public double getLargestX(Shape s) {
+        double largestX = 0.0;
+        for(Point currentPt : s.getPoints()){
+            double currentPtX  = currentPt.getX();
+            if(currentPtX>largestX) largestX = currentPtX;
+        }
+
+        return largestX;
+    } 
+
 	
     //Add code in the method testPerimeter
     public void testPerimeter () {
@@ -59,10 +71,14 @@ public class PerimeterAssignmentRunner {
         int numPoints = getNumPoints(s);
 	double avLength = getAverageLength(s);
 	double largestSide = getLargestSide(s);
+        double largestX = getLargestX(s);
         System.out.println("perimeter = " + length);
         System.out.println("Number of points = " + numPoints);
 	System.out.println("Average length = " + avLength);
         System.out.println("The largest side in the shape = " + largestSide);
+        System.out.println("The largest x point in the shape = " + largestX);
+        
+    }
 
 
 
