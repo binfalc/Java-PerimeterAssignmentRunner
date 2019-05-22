@@ -20,6 +20,7 @@ public class PerimeterAssignmentRunner {
         return totalPerim;
     }
 
+
     //Complete writing the method getNumPoints
     public int getNumPoints (Shape s) {
 	//Start with count = 0
@@ -31,6 +32,8 @@ public class PerimeterAssignmentRunner {
             }
 	//count is the answer        
         return count;
+    }
+
 
     //Complete writing the method getAverageLength
     public double getAverageLength(Shape s) {
@@ -38,6 +41,8 @@ public class PerimeterAssignmentRunner {
         double average = getPerimeter(s)/getNumPoints(s);
 	//average is the answer
         return average;
+    }
+
 
     //Complete writing the method getLargestSide
     public double getLargestSide(Shape s) {
@@ -51,6 +56,7 @@ public class PerimeterAssignmentRunner {
         return largest;
     }
 
+
     //Complete writing the method getLargestX
     public double getLargestX(Shape s) {
         double largestX = 0.0;
@@ -60,7 +66,21 @@ public class PerimeterAssignmentRunner {
         }
 
         return largestX;
-    } 
+    }
+
+
+     //Complete writing the method getLargestPerimeterMultipleFile
+     public double getLargestPerimeterMultipleFiles() {
+        double largestPerimeter = 0.0;
+        DirectoryResource dr = new DirectoryResource();
+        for (File f : dr.selectedFiles()){
+            FileResource fr = new FileResource(f);
+            Shape fileShape = new Shape();
+            double peri = getPerimeter(fileShape);
+            if (peri>largestPerimeter) largestPerimeter = peri;            
+        }
+        return largestPerimeter;
+    }
 
 	
     //Add code in the method testPerimeter
