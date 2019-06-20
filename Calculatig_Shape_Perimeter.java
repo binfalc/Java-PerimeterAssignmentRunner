@@ -83,7 +83,7 @@ public class PerimeterAssignmentRunner {
         	if (peri>largestPerimeter) largestPerimeter = peri;            
             }
 
-            return largestPerimeter;
+        return largestPerimeter;
     }
 
 	
