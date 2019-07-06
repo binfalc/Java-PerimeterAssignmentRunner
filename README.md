@@ -61,6 +61,3 @@ Then it creates a Shape from the FileResource and calculates the shapes perimete
 3. Finish writing the method getFileWithLargestPerimeter that has no parameters. This method should, like the getLargestPerimeterMultipleFiles method, create its own Directory Resource, except that this new method returns the File that has the largest such perimeter, so it has return type File.
 
 4. Add code to the method testFileWithLargestPerimeter to call getFileWithLargestPerimeter. For the File that is returned, print the name of that file.
-
-It is important to test your code with several files.
-
